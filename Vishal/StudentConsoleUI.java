@@ -39,9 +39,9 @@ public class StudentConsoleUI {
         Student newStudent = new Student(id, name, age, course, gpa);
         
         if (manager.addStudent(newStudent)) {
-            System.out.println("✓ Student added successfully!");
+            System.out.println(" Student added successfully!");
         } else {
-            System.out.println("❌ Error: Student ID already exists!");
+            System.out.println(" Error: Student ID already exists!");
         }
     }
 
@@ -52,10 +52,10 @@ public class StudentConsoleUI {
         
         Student foundStudent = manager.searchStudent(searchId);
         if (foundStudent != null) {
-            System.out.println("\n✓ Student Found:");
+            System.out.println("\n Student Found:");
             foundStudent.displayInfo();
         } else {
-            System.out.println("❌ Student not found!");
+            System.out.println(" Student not found!");
         }
     }
     
@@ -89,9 +89,9 @@ public class StudentConsoleUI {
             double gpa = scanner.nextDouble();
             if (gpa != -1) student.setGpa(gpa);
             
-            System.out.println("✓ Student updated successfully!");
+            System.out.println(" Student updated successfully!");
         } else {
-            System.out.println("❌ Student not found!");
+            System.out.println(" Student not found!");
         }
     }
 
@@ -100,9 +100,10 @@ public class StudentConsoleUI {
         System.out.print("\nEnter Student ID to delete: ");
         int deleteId = scanner.nextInt();
         if (manager.deleteStudent(deleteId)) {
-            System.out.println("✓ Student deleted successfully!");
+            System.out.println(" Student deleted successfully!");
         } else {
-            System.out.println("❌ Student not found!");
+            System.out.println(" Student not found!");
         }
     }
+
 }
